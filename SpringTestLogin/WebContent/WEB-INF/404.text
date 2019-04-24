@@ -1,0 +1,47 @@
+404错误
+
+直译为 没有找到映射的地址
+
+1  controller 包没有导入配置文件
+2  web xml文件 里面缺少必要配置项目
+3  workspace 关联到其他工程
+4  表单里的 action 与RequestMapping地址不一致
+
+
+ 映射的地址 一定要注意大小写
+
+Dao Class
+
+ sql语句复制过来一定要改里面的字段名字
+
+
+private JdbcTemplate jdbcTemplate;
+	/**
+	 * @param jdbcTemplate セットする jdbcTemplate
+	 */
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+
+
+Mapper Class里的映射地址一定要跟数据表一致
+
+
+
+index界面里 最重要的 也是最常用的两个属性值  id name  其中id属性是可以自定义的
+但是 name属性 一定要跟java后台定义的变量一致
+
+
+
+Jquery 语法使用之前要导入 Jquery库
+
+
+	$(function(){
+	$("#addbutton").click(function(){
+		$("#addForm").submit();
+
+	})
+})
+
+其中addbutton 是button的id属性  addForm是form的id属性  $("#XXX")→选择器 
